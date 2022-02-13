@@ -1,0 +1,65 @@
+
+h1 {
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(63, 63, 63);
+}
+
+.contenedor {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.midiv {
+    height: 200px;
+    background-color: rgb(111, 63, 63);
+    width: 250px;
+}
+
+.midiv:hover, .midiv.active {
+    animation-name: rotation;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: initial;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotation {
+    0% {
+        background-color: rgb(111, 63, 63);
+        transform: rotate(0deg);
+    }
+    100% {
+        background-color: rgb(95, 63, 121);
+        transform: rotate(360deg);
+    }
+}
+
+.midiv2 {
+    height: 200px;
+    background-color: rgb(63, 63, 63);
+    width: 250px;
+    margin-top: 50px;
+}
+
+.midiv2:hover, .midiv2.active {
+    animation-name: traslation;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes traslation {
+    100% {transform: translate(100%);}
+
+    0% {opacity:1;}
+    30% {opacity:1;}
+    100% {opacity:0;}
+}
